@@ -1,10 +1,34 @@
+import GitHubIcon from "@mui/icons-material/GitHub";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import { Button, Link, Typography } from "@mui/material";
 import { FunctionComponent } from "react";
+
+function Copyright() {
+	return (
+		<Typography variant="body2" sx={{ color: "text.secondary", mt: 1 }}>
+			{"Copyright © "}
+			<Link color="text.secondary" href="https://asdjasjdas.com/">
+				Дмтрий Жильцов
+			</Link>
+			&nbsp;
+			{new Date().getFullYear()}
+		</Typography>
+	);
+}
 
 const Footer: FunctionComponent = () => {
 	return (
-		<>
-			<h2 className="text-3xl text-red-950">Footer</h2>
-		</>
+		<div className="flex flex-row justify-between items-center">
+			<div>
+				<Button href="https://github.com/omintbp">
+					<GitHubIcon />
+				</Button>
+				<Button href="https://t.me/Dmzpp">
+					<TelegramIcon />
+				</Button>
+			</div>
+			<div className="p-4">{Copyright()}</div>
+		</div>
 	);
 };
 
