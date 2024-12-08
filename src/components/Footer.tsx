@@ -23,7 +23,7 @@ const Footer: FunctionComponent = () => {
 				<Button href="https://github.com/omintbp">
 					<GitHubIcon />
 				</Button>
-				<Button href="https://t.me/Dmzpp">
+				<Button href="https://1231213.com">
 					<TelegramIcon />
 				</Button>
 			</div>
