@@ -2,11 +2,11 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { Box, Fab, Grid2 as Grid, Pagination } from "@mui/material";
 
 import { FunctionComponent } from "react";
-import ScrollTop from "../../components/ScrollTop";
-import FilterPanel from "./FilterPanel";
-import PetCard from "./PetCard";
+import FilterPanel from "../modules/pets/FilterPanel";
+import PetCard from "../modules/pets/PetCard";
+import ScrollTop from "../shared/components/ScrollTop";
 
-const MainPage: FunctionComponent = () => {
+const PetsPage: FunctionComponent = () => {
 	return (
 		<Box className="flex">
 			<Box className="w-5/12">
@@ -79,4 +79,4 @@ const MainPage: FunctionComponent = () => {
 	);
 };
 
-export default MainPage;
+export default PetsPage;

@@ -1,7 +1,7 @@
 import { Container, Toolbar } from "@mui/material";
 import { Outlet } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header/Header";
+import Footer from "../shared/components/Footer";
+import Header from "../shared/components/Header/Header";
 
 export default function RootLayout() {
 	return (
