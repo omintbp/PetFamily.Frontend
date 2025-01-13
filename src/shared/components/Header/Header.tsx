@@ -7,6 +7,7 @@ import {
 	Box,
 	Collapse,
 	Container,
+	Skeleton,
 	Toolbar,
 	Typography,
 	useScrollTrigger,
@@ -30,6 +31,7 @@ function CollapseOnScroll(props: Props) {
 
 export default function Header() {
 	const isAuthenticated = useAppSelector(authSelectors.selectIsAuthenticated);
+	const fetchStatus = useAppSelector(authSelectors.selectAuthFetchStatus);
 
 	return (
 		<Box sx={{ flexGrow: 1 }}>
@@ -47,7 +49,9 @@ export default function Header() {
 								Pet Family
 							</Typography>
 							<Box className="flex flex-row justify-between items-center gap-4">
-								{isAuthenticated ? (
+								{fetchStatus === "loading" ? (
+									<Skeleton variant="circular" width={40} height={40} />
+								) : isAuthenticated ? (
 									<Box className="flex flex-row justify-between items-center gap-4">
 										<NavLink to="/profile">
 											<AccountCircleIcon
